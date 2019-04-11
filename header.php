@@ -11,7 +11,7 @@
   <title><?php bloginfo('name');?></title>
 
   <!-- Bootstrap core CSS -->
-  <link href="<?php bloginfo('template_directory')?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php bloginfo('template_directory')?>/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   <link href="<?php bloginfo('template_directory')?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -28,6 +28,10 @@
 <body id="page-top" dir="rtl">
 
   <!-- Navigation -->
+
+
+
+
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Shaiin</a>
@@ -35,13 +39,24 @@
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
 
-        <ul class="navbar-nav text-uppercase ml-auto">
+<div class="collapse navbar-collapse" id="navbarResponsive">
+
+<?php wp_nav_menu( array(
+          'theme_location'  => ‘Menu1’,
+          'menu'            => '',
+          'container'       => 'ul',
+          'container_class' => 'nav-link js-scroll-trigger',
+          'container_id'    => 'navbar-nav text-uppercase ml-auto',
+          'menu_class'      => '',
+          'menu_id'         => 'navbar-nav text-uppercase ml-auto',
+        ) );?>
+        
+         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">מוצרי ביטוח ופיננסים</a>
           </li>
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#portfolio">ביטוח הנסיעות לחו"ל</a>
           </li>
           <li class="nav-item">
@@ -53,8 +68,8 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">צרו קשר</a>
           </li>
-        </ul>
-      </div>
+        </ul> -->
+      </div> 
     </div>
   </nav>
 
