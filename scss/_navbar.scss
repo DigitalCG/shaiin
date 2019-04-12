@@ -14,15 +14,15 @@
   .navbar-brand {
     color: $primary;
     @include script-font;
-    &.active,
-    &:active,
+    &.current_page_item,
+    &:current_page_item,
     &:focus,
     &:hover {
       color: darken($primary, 10%);
     }
   }
   .navbar-nav {
-    .nav-item {
+    .page_item {
       .nav-link {
         font-size: 90%;
         font-weight: 400;
@@ -30,7 +30,7 @@
         letter-spacing: 1px;
         color: white;
         @include heading-font;
-        &.active,
+        &.current_page_item,
         &:hover {
           color: $primary;
         }
@@ -54,7 +54,7 @@
       transition: all 0.3s;
     }
     .navbar-nav {
-      .nav-item {
+      .page_item {
         .nav-link {
           padding: 1.1em 1em !important;
         }

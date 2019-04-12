@@ -44,8 +44,23 @@ if ( ! function_exists( 'shaiin_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'shaiin' ),
+			'menu1' => esc_html__( 'Primary', 'shaiin' ),
+      'main-menu' => esc_html__( 'Header', 'shaiin' ),
 		) );
+
+/*****************
+*/
+
+
+
+
+
+
+/*****************
+*/
+
+
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -116,21 +131,36 @@ function shaiin_widgets_init() {
 }
 add_action( 'widgets_init', 'shaiin_widgets_init' );
 
+
+
 /**
  * Enqueue scripts and styles.
  */
-function shaiin_scripts() {
+function shaiin_scripts() { 
 	wp_enqueue_style( 'shaiin-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'shaiin-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+  wp_enqueue_style( 'shaiin-bootstrap', get_template_directory_uri().'/vendor/bootstrap/css/bootstrap.css' ); 
+  wp_enqueue_style( 'shaiin-agency', get_template_directory_uri().'/css/agency.css' ); 
+  wp_enqueue_style( 'shaiin-all.min', get_template_directory_uri().'/vendor/fontawesome-free/css/all.min.css' ); 
+	
+  wp_enqueue_script('jquery');
+	
+  wp_enqueue_script( 'shaiin-jquery.min', get_template_directory_uri() . '/vendor/jquery/jquery.min.js', array(), '1.0', true );
+  wp_enqueue_script( 'shaiin-bootstrap.bundle.min', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js', array(), '1.0', true );
+  wp_enqueue_script( 'shaiin-jquery.easing.min', get_template_directory_uri() . '/vendor/jquery-easing/jquery.easing.min.js', array(), '1.0', true );
+  wp_enqueue_script( 'shaiin-jqBootstrapValidation', get_template_directory_uri() . '/js/jqBootstrapValidation.js', array(), '1.0', true );
+  wp_enqueue_script( 'shaiin-contact_me', get_template_directory_uri() . '/js/contact_me.js', array(), '1.0', true );
+  wp_enqueue_script( 'shaiin-agency.min', get_template_directory_uri() . '/js/agency.min.js', array(), '1.0', true );
 
-	wp_enqueue_script( 'shaiin-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'shaiin_scripts' );
+
+
+
 
 /**
  * Implement the Custom Header feature.

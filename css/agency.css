@@ -16,11 +16,15 @@ p {
 
 a {
   color: #fff;
+  padding: 0 5px;
 }
 
+
 a:hover {
-  color: #fec810;
+  color: #4CEBE5;
+  
 }
+
 
 .text-primary {
   color: #21106F !important;
@@ -84,7 +88,7 @@ section h3.section-subheading {
   color: white;
 }
 
-.btn-primary:active, .btn-primary:focus {
+.btn-primary:current_page_item, .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
@@ -124,9 +128,10 @@ img::-moz-selection {
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
   color: #fff;
+  padding: 13px;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav .navbar-nav .page_item .nav-link {
   font-size: 90%;
   font-weight: 400;
   padding: 0.75em 0;
@@ -135,15 +140,16 @@ img::-moz-selection {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .page_item page-item-2 .nav-item .nav-link:hover {
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #4CEBE5;
 }
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 5px;
+    padding-top: 15px;
     padding-bottom: 25px;
     padding-right: 250px;
+
 
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -151,11 +157,11 @@ img::-moz-selection {
     background-color: transparent;
   }
   #mainNav .navbar-brand {
-    font-size: 1.75em;
+    font-size: 3.75em;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  #mainNav .navbar-nav .nav-item .nav-link {
+  #mainNav .navbar-nav .page_item .nav-link {
     padding: 1.1em 1em !important;
   }
   #mainNav.navbar-shrink {
@@ -692,6 +698,6 @@ ul.social-buttons li a {
   background-color: #4CEBE5;
 }
 
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+ul.social-buttons li a:current_page_item, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #21106F;
 }
