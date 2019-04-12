@@ -15,7 +15,7 @@ p {
 }
 
 a {
-  color: #fff;
+  color: #21106F;
   padding: 0 5px;
 }
 
@@ -24,6 +24,7 @@ a:hover {
   color: #4CEBE5;
   
 }
+
 
 
 .text-primary {
@@ -36,6 +37,7 @@ h3,
 h4,
 h5,
 h6 {
+  
   font-weight: 700;
   font-family: 'Rubik','Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
@@ -148,7 +150,7 @@ img::-moz-selection {
   #mainNav {
     padding-top: 15px;
     padding-bottom: 25px;
-    padding-right: 250px;
+    padding-right: 150px;
 
 
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -228,6 +230,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .service-heading {
+  color: #21106F;
   margin: 15px 0;
   text-transform: none;
 }

@@ -94,6 +94,9 @@ if ( ! function_exists( 'shaiin_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+ add_image_size('post-customthumb',220, 180, true);
+
 	}
 endif;
 add_action( 'after_setup_theme', 'shaiin_setup' );

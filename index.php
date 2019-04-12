@@ -16,7 +16,63 @@ get_header();
 ?>
 
 	
-<!-- Services -->
+<?php if ( have_posts() ) : while ( have_posts() ) :the_post();?>
+
+<!-- Services-->
+<section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Services</h2>
+          <!-- 
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+            
+
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            </span>
+          <h4 class="service-heading"><a href="<?php the_permalink();?>"><?php echo get_the_title( $post_id ); ?></a></h4>
+          <?php the_excerpt();?></a>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading"><a href="<?php the_permalink();?>"><?php echo get_the_title( $post_id ); ?></a></h4>
+            <?php the_excerpt();?>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading"><a href="<?php the_permalink();?>"><?php echo get_the_title( $id ); ?></h4>
+            <?php the_excerpt();?>
+        </div>
+      </div>
+    </div>
+
+
+     <?php  endwhile;
+
+      the_posts_navigation();
+
+    else :
+
+      get_template_part( 'template-parts/content', 'none' );
+
+    endif;
+    ?>
+
+
+
+<!-- Services 
   <section id="services">
     <div class="container">
       <div class="row">
@@ -52,7 +108,10 @@ get_header();
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
+
+
+
 
   <!-- Portfolio Grid -->
   <section class="bg-light" id="portfolio">
